@@ -3,7 +3,13 @@ node_js:
 - 8.8.1
 install:
 - npm install
-script: npm test
+script: 
+- npm test
+- apt-get update -qy
+- apt-get install -y ruby-dev
+- gem install dpl
+- git config --global push.default matching
+- dpl --provider=openshift --user=$OPENSHIFT_USER --password=$OPENSHIFT_PASS --domain=pringstudio --app=web
 deploy:
   provider: openshift
   user: puneetvashisht@gmail.com
