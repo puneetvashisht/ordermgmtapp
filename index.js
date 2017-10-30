@@ -4,7 +4,7 @@ const PORT = process.env.OPENSHIFT_NODEJS_PORT || 8000;
 const IP = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 
 function handleRequest(request, response) {
-  response.end(`Web server  changed back running on Node.js v${process.versions.node}.`);
+  response.end(`Web server 1 changed back running on Node.js v${process.versions.node}.`);
 }
 
 var server = http.createServer(handleRequest);
