@@ -15,6 +15,6 @@ deploy:
 after_success:
 - git config --global user.email "puneetvashisht@gmail.com"
 - git config --global user.name "Puneet Vashisht"
-- git add *
-- git commit -am "Travis change"
+- git add README.md
+- git commit -m "Travis change"
 - git push
