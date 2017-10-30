@@ -12,3 +12,8 @@ deploy:
   domain: 'puneet06'
   on:
     repo: puneetvashisht/ordermgmtapp
+after_success:
+- git config --global user.email "puneetvashisht@gmail.com"
+- git config --global user.name "Puneet Vashisht"
+- git add --all
+- git commit -am "Travis change"
