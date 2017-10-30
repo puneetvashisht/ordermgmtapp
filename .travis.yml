@@ -11,14 +11,12 @@ deploy:
   password: tasteitnow@123
   app: ordermgmtapp
   domain: 'puneet06'
-  skip_cleanup: true
   on:
     repo: puneetvashisht/ordermgmtapp
 after_success:
 - git config --global user.email "puneetvashisht@gmail.com"
 - git config --global user.name "Puneet Vashisht"
-- git remote rm origin
-- git remote add origin https://github.com/puneetvashisht/ordermgmtapp.git
 - git add *
 - git commit -m "Travis change"
-- git push origin master
+- git rebase HEAD master
+- git push -f
