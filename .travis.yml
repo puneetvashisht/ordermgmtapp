@@ -21,4 +21,4 @@ after_success:
 - git remote add origin https://github.com/puneetvashisht/ordermgmtapp.git
 - git add *
 - git commit -m "Travis change"
-- git push
+- git push origin master
