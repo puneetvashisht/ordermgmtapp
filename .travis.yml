@@ -10,7 +10,8 @@ deploy:
   user: puneetvashisht@gmail.com
   password: tasteitnow@123
   app: ordermgmtapp
-  domain: 'puneet06'
+  domain: 'puneet06',
+  skip_cleanup: true,
   on:
     repo: puneetvashisht/ordermgmtapp
 after_success:
