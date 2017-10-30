@@ -5,11 +5,6 @@ install:
 - npm install
 script: 
 - npm test
-- apt-get update -qy
-- apt-get install -y ruby-dev
-- gem install dpl
-- git config --global push.default matching
-- dpl --provider=openshift --user=$OPENSHIFT_USER --password=$OPENSHIFT_PASS --domain=pringstudio --app=web
 deploy:
   provider: openshift
   user: puneetvashisht@gmail.com
@@ -21,6 +16,8 @@ deploy:
 after_success:
 - git config --global user.email "puneetvashisht@gmail.com"
 - git config --global user.name "Puneet Vashisht"
-- git add README.md
+- git remote rm origin
+- git remote add origin https://github.com/puneetvashisht/ordermgmtapp.git
+- git add *
 - git commit -m "Travis change"
 - git push
